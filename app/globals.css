@@ -1,26 +1,141 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy: 222 47% 11%;
+  --navy-soft: 217 33% 17%;
+  --sky: 199 89% 48%;
+  --sky-deep: 201 96% 32%;
+  --ice: 210 40% 97%;
+  --line: 214 18% 86%;
+
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(var(--navy));
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(var(--navy));
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(var(--navy));
+  --primary: hsl(var(--navy));
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(var(--ice));
+  --secondary-foreground: hsl(var(--navy));
+  --muted: hsl(var(--ice));
+  --muted-foreground: hsl(215 16% 40%);
+  --accent: hsl(var(--ice));
+  --accent-foreground: hsl(var(--navy));
+  --destructive: hsl(0 72% 51%);
+  --base-border: hsl(var(--line));
+  --input: hsl(var(--line));
+  --ring: hsl(var(--sky));
+  --radius: 0px;
+
+  --chart-1: hsl(var(--navy));
+  --chart-2: hsl(var(--sky));
+  --chart-3: hsl(var(--sky-deep));
+  --chart-4: hsl(210 20% 70%);
+  --chart-5: hsl(222 20% 40%);
+
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(var(--navy));
+  --sidebar-primary: hsl(var(--navy));
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(var(--ice));
+  --sidebar-accent-foreground: hsl(var(--navy));
+  --sidebar-border: hsl(var(--line));
+  --sidebar-ring: hsl(var(--sky));
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --font-heading: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--base-border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+
+  --color-navy: hsl(var(--navy));
+  --color-navy-soft: hsl(var(--navy-soft));
+  --color-sky: hsl(var(--sky));
+  --color-sky-deep: hsl(var(--sky-deep));
+  --color-ice: hsl(var(--ice));
+  --color-line: hsl(var(--line));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    @apply font-sans;
+    font-size: 15px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-white text-foreground;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  .heading-display {
+    @apply font-display text-[2rem] font-semibold leading-[1.05] tracking-[-0.02em] md:text-[2.75rem];
+  }
+
+  .heading-section {
+    @apply font-display text-[1.6rem] font-semibold leading-[1.12] tracking-[-0.02em] md:text-[2rem];
+  }
+
+  .index-no {
+    @apply font-display text-sm font-semibold tracking-wide text-sky;
+  }
 }

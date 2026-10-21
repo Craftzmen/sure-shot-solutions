@@ -9,8 +9,8 @@ type BrandLogoProps = {
   tone?: "light" | "dark"
 }
 
-const markSize = { sm: 22, md: 24, lg: 28 } as const
-const textSize = { sm: "text-[15px]", md: "text-base", lg: "text-lg" } as const
+const markSize = { sm: 26, md: 28, lg: 32 } as const
+const textSize = { sm: "text-[12px] min-[420px]:text-[13px]", md: "text-sm", lg: "text-base" } as const
 
 export function BrandLogo({ size = "md", className, tone = "light" }: BrandLogoProps) {
   return (
@@ -24,8 +24,10 @@ export function BrandLogo({ size = "md", className, tone = "light" }: BrandLogoP
       )}
     >
       <LogoMark size={markSize[size]} tone={tone} />
-      <span className={cn("font-display leading-none font-semibold tracking-[-0.03em]", textSize[size])}>
-        Sure Shot <span className={tone === "dark" ? "font-medium text-sky" : "font-medium text-sky-deep"}>Solutions</span>
+      <span className={cn("font-display leading-none font-semibold tracking-[-0.04em]", textSize[size])}>
+        {siteConfig.wordmark[0]}{" "}
+        <span className={tone === "dark" ? "font-medium text-sky" : "font-medium text-sky-deep"}>{siteConfig.wordmark[1]}</span>
+        <span className="ml-1 text-[0.72em] font-semibold tracking-[0.14em]">{siteConfig.wordmark[2]}</span>
       </span>
     </Link>
   )

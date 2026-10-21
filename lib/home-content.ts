@@ -1,7 +1,7 @@
 export const homeHero = {
   eyebrow: "Insurance, made easier to understand",
   title: "Protect what you drive, own, and love.",
-  lead: "Sure Shot Solutions LLC helps North Carolina households start a clearer conversation about auto, homeowners, renters, and life insurance—so the next step feels informed and practical.",
+  lead: "AUTO DEPARTMENT LLC helps North Carolina households start a clearer conversation about auto, homeowners, renters, and life insurance—so the next step feels informed and practical.",
   primary: { href: "/#coverage", label: "Explore coverage" },
   secondary: { href: "tel:+18882732055", label: "Call (888) 273-2055" },
   chips: ["North Carolina focused", "Available 24/7", "No online payments"],

@@ -10,11 +10,11 @@ import { LegalNotices } from "@/components/home/legal-notices"
 import { siteConfig } from "@/lib/site-nav"
 
 export const metadata: Metadata = {
-  title: { absolute: "Insurance Coverage in North Carolina | Sure Shot Solutions LLC" },
+  title: { absolute: `Insurance Coverage in North Carolina | ${siteConfig.name}` },
   description: siteConfig.description,
-  keywords: ["Sure Shot Solutions LLC", "North Carolina insurance", "auto insurance", "homeowners insurance", "renters insurance", "life insurance"],
+  keywords: [siteConfig.name, "North Carolina insurance", "auto insurance", "homeowners insurance", "renters insurance", "life insurance"],
   openGraph: {
-    title: "Insurance Coverage in North Carolina | Sure Shot Solutions LLC",
+    title: `Insurance Coverage in North Carolina | ${siteConfig.name}`,
     description: siteConfig.description,
     url: "/",
     type: "website",

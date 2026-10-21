@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description: siteConfig.tagline,
   },
   keywords: [
-    "Sure Shot Solutions LLC",
+    siteConfig.name,
     "North Carolina insurance",
     "auto insurance",
     "homeowners insurance",
@@ -78,9 +78,11 @@ export default function RootLayout({
               telephone: siteConfig.phone,
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Charlotte",
-                addressRegion: "NC",
-                addressCountry: "US",
+                streetAddress: siteConfig.streetAddress,
+                addressLocality: siteConfig.addressLocality,
+                addressRegion: siteConfig.addressRegion,
+                postalCode: siteConfig.postalCode,
+                addressCountry: siteConfig.addressCountry,
               },
               areaServed: { "@type": "State", name: "North Carolina" },
             }),

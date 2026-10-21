@@ -152,7 +152,7 @@ export function CoverageRequestForm() {
               <label htmlFor="consent" className="flex items-start gap-3 text-sm leading-relaxed text-navy/80">
                 <input id="consent" name="consent" type="checkbox" required className="mt-1 size-4 accent-navy" />
                 <span>
-                  I agree that Sure Shot Solutions LLC may contact me about this request by phone, email, or text. I understand this is not an appointment, quote, policy, or payment authorization.
+                  I agree that {siteConfig.name} may contact me about this request by phone, email, or text. I understand this is not an appointment, quote, policy, or payment authorization.
                 </span>
               </label>
             </div>

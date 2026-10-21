@@ -88,7 +88,7 @@ export const legalNotices = [
     title: "Privacy notice",
     paragraphs: [
       "We use information you submit—such as your name, contact details, state, ZIP code, coverage focus, and message—to respond to your request and coordinate service-related communication. We do not ask for Social Security numbers, payment-card details, or government identification through this form. We do not sell personal information.",
-      "Contact support@sureshotsolutions.me with a privacy question or request.",
+      "Contact support@autodepartment.me with a privacy question or request.",
     ],
   },
   {
@@ -133,7 +133,7 @@ export const legalNotices = [
     id: "accessibility",
     title: "Accessibility statement",
     paragraphs: [
-      "We aim to keep this website readable, keyboard accessible, responsive, and usable with common assistive technologies. If you encounter a barrier, contact support@sureshotsolutions.me or call (888) 273-2055 and identify the page or feature that needs attention.",
+      "We aim to keep this website readable, keyboard accessible, responsive, and usable with common assistive technologies. If you encounter a barrier, contact support@autodepartment.me or call (888) 273-2055 and identify the page or feature that needs attention.",
     ],
   },
 ]
